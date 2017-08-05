@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">  
+ <tiles-definitions>  
+  
+   <!-- Base Definition -->
+   <definition name="defaultTemplate" template="/WEB-INF/views/tiles/layouts/defaultLayout.jsp">
+   		  	 
+   		   <put-attribute name="title" value="" />  
+	       <put-attribute name="header" value="/WEB-INF/views/tiles/template/defaultHeader.jsp" />  
+	       <put-attribute name="menu" value="" />   
+	       <put-attribute name="body" value="" />  
+	       <put-attribute name="footer" value="/WEB-INF/views/tiles/template/defaultFooter.jsp" /> 
+	       
+	       <put-list-attribute name="cssList" cascade="true">
+	            <add-attribute value="/resources/bootstrap/dist/css/bootstrap.min.css" />
+	            <add-attribute value="/resources/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css" />
+	            <add-attribute value="/resources/css/animate.css" />  
+	            <add-attribute value="/resources/css/style.css" />
+	            <add-attribute value="/resources/css/colors/default.css" />
+	            
+        	</put-list-attribute>  
+        	<put-list-attribute name="jsList" cascade="true">
+	            <add-attribute  value="/resources/bootstrap/dist/js/bootstrap.min.js" />
+	            <add-attribute value="/resources/plugins/bower_components/jquery/dist/jquery.min.js" />
+	            <add-attribute value="/resources/bootstrap/dist/js/bootstrap.min.js" />
+	            <add-attribute value="/resources/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js" />
+	            <add-attribute value="/resources/js/jquery.slimscroll.js" />
+	            <add-attribute value="/resources/js/waves.js" />
+	            <add-attribute value="/resources/js/custom.min.js" />
+	            <add-attribute value="/resources/jquery/jquery-3.1.1.js" />
+	            
+           </put-list-attribute> 
+   </definition>  
+  
+   <!-- admin page -->
+   <definition name="admin" extends="defaultTemplate">  
+       <put-attribute name="title" value="Online Examination System" />
+       <put-attribute name="menu" value="/WEB-INF/views/tiles/template/adminMenu.jsp" />  
+       <put-attribute name="body" value="/WEB-INF/views/admin/admin.jsp" />  
+   </definition>  
+ 
+   <!-- faculty Page -->
+   <definition name="faculty" extends="defaultTemplate">  
+       <put-attribute name="title" value="Online Examination System" /> 
+       <put-attribute name="menu" value="/WEB-INF/views/tiles/template/facultyMenu.jsp" /> 
+       <put-attribute name="body" value="/WEB-INF/views/faculty/faculty.jsp" />  
+   </definition>  
+       
+   <!--user Page -->
+   <definition name="student" extends="defaultTemplate">  
+       <put-attribute name="title" value="Online Examination System" /> 
+       <put-attribute name="menu" value="/WEB-INF/views/tiles/template/studentMenu.jsp" /> 
+       <put-attribute name="body" value="/WEB-INF/views/student/student.jsp" />  
+   </definition>  
+ 	 <!--Student profile -->
+   <definition name="Sprofile" extends="defaultTemplate">  
+       <put-attribute name="title" value="Online Examination System" /> 
+       <put-attribute name="menu" value="/WEB-INF/views/tiles/template/studentMenu.jsp" /> 
+       <put-attribute name="body" value="/WEB-INF/views/student/Sprofile.jsp" />  
+   </definition>
+   <!--faculty profile -->
+   <definition name="Fprofile" extends="defaultTemplate">  
+       <put-attribute name="title" value="Online Examination System" /> 
+       <put-attribute name="menu" value="/WEB-INF/views/tiles/template/facultyMenu.jsp" /> 
+       <put-attribute name="body" value="/WEB-INF/views/student/Fprofile.jsp" />  
+   </definition>
+   <!-- admin Profile -->
+   <definition name="Aprofile" extends="defaultTemplate">  
+       <put-attribute name="title" value="Online Examination System" />
+       <put-attribute name="menu" value="/WEB-INF/views/tiles/template/adminMenu.jsp" />  
+       <put-attribute name="body" value="/WEB-INF/views/admin/Aprofile.jsp" />  
+   </definition>  
+   <!-- Users page -->
+   <definition name="users" extends="defaultTemplate">  
+       <put-attribute name="title" value="Online Examination System" />
+       <put-attribute name="menu" value="/WEB-INF/views/tiles/template/adminMenu.jsp" />  
+       <put-attribute name="body" value="/WEB-INF/views/admin/users.jsp" />  
+   </definition> 
+   <!-- New Users page -->
+   <definition name="registration" extends="defaultTemplate">  
+       <put-attribute name="title" value="Online Examination System" />
+       <put-attribute name="menu" value="/WEB-INF/views/tiles/template/adminMenu.jsp" />  
+       <put-attribute name="body" value="/WEB-INF/views/admin/registration.jsp" />  
+   </definition> 
+   <!-- Categories page -->
+   <definition name="categories" extends="defaultTemplate">  
+       <put-attribute name="title" value="Online Examination System" />
+       <put-attribute name="menu" value="/WEB-INF/views/tiles/template/adminMenu.jsp" />  
+       <put-attribute name="body" value="/WEB-INF/views/admin/categories.jsp" />  
+   </definition>
+   <!--New Category Page  -->
+   <definition name="new_category" extends="defaultTemplate">  
+       <put-attribute name="title" value="Online Examination System" />
+       <put-attribute name="menu" value="/WEB-INF/views/tiles/template/adminMenu.jsp" />  
+       <put-attribute name="body" value="/WEB-INF/views/admin/new_category.jsp" />  
+   </definition>
+   <!--Questions Page  -->
+   <definition name="questions" extends="defaultTemplate">  
+       <put-attribute name="title" value="Online Examination System" />
+       <put-attribute name="menu" value="/WEB-INF/views/tiles/template/adminMenu.jsp" />  
+       <put-attribute name="body" value="/WEB-INF/views/admin/questions.jsp" />  
+   </definition>
+   <!--New Questions Page  -->
+   <definition name="new_question" extends="defaultTemplate">  
+       <put-attribute name="title" value="Online Examination System" />
+       <put-attribute name="menu" value="/WEB-INF/views/tiles/template/adminMenu.jsp" />  
+       <put-attribute name="body" value="/WEB-INF/views/admin/new_question.jsp" />  
+   </definition>
+   <!--Question selection criteria page-->
+   <definition name="questioncriteri" extends="defaultTemplate">  
+       <put-attribute name="title" value="Online Examination System" /> 
+       <put-attribute name="menu" value="/WEB-INF/views/tiles/template/studentMenu.jsp" /> 
+       <put-attribute name="body" value="/WEB-INF/views/student/questioncriteri.jsp" />  
+   </definition>
+   <!-- Take Test Page -->
+   <definition name="take_exam" extends="defaultTemplate">  
+       <put-attribute name="title" value="Online Examination System" /> 
+       <put-attribute name="menu" value="/WEB-INF/views/tiles/template/studentMenu.jsp" /> 
+       <put-attribute name="body" value="/WEB-INF/views/student/question_test.jsp" />  
+   </definition>
+</tiles-definitions>
